@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>DogeSteps PRO</title>
+  <link rel="manifest" href="manifest.json" />
+  <script defer src="script.js"></script>
+  <style>
+    body { font-family: Arial; padding:20px; background:#f4f4f4; }
+    .box { background:white; padding:20px; border-radius:10px; margin-bottom:20px; }
+    button { padding:10px 20px; font-size:16px; margin-top:10px; width:100%; }
+    input { padding:10px; width:100%; margin-top:10px; font-size:16px; }
+  </style>
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <div id="loginBox">
+    <h2>Iniciar sessão</h2>
+    <label for="pinInput">Insira o PIN:</label>
+    <input id="pinInput" type="password" maxlength="4" />
+    <div id="loginError" style="color:red;"></div>
+    <button id="loginBtn" class="btn">Iniciar sessão</button>
+</div>
+
+  <!-- APP PRINCIPAL -->
+  <div id="appBox" class="box" style="display:none;">
+    <h2>DogeSteps</h2>
+    <p>Passos: <span id="steps">0</span></p>
+    <p>DOGE: <span id="doge">0</span></p>
+    <button id="addStep">Adicionar Passo</button>
+    <button id="logoutBtn" style="background:#ff3b3b; color:white;">Sair</button>
+  </div>
+
+  <!-- CARTEIRA -->
+  <div id="walletBox" class="box" style="display:none;">
+    <h2>Carteira Interna</h2>
+    <p>Endereço atual:</p>
+    <p id="walletAddress"></p>
+    <button id="generateWalletBtn">Gerar novo endereço</button>
+  </div>
+
+  <!-- LEVANTAMENTO -->
+  <div id="withdrawBox" class="box" style="display:none;">
+    <h2>Levantamento Manual</h2>
+    <p>Endereço para receber DOGE:</p>
+    <input id="withdrawAddress" placeholder="DH4a..." />
+    <p>Quantidade:</p>
+    <input id="withdrawAmount" placeholder="0" />
+    <button id="withdrawBtn">Solicitar Levantamento</button>
+    <p id="withdrawMsg"></p>
+  </div>
+
+</body>
+</html>

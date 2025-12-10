@@ -1,0 +1,5 @@
+[build]
+  publish = "."
+  command = ""
+
+# If you use a subfolder, change the publish value accordingly (e.g. "dist")
